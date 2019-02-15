@@ -111,7 +111,7 @@ def is_prime(n):
     return True
 
 # -------------------------------------------------------------------------
-#  TODO: 2. Implement and test the draw_a_picture function.
+#  DONE: 2. Implement and test the draw_a_picture function.
 #           Tests have been written for you (above in main).
 #  We suggest breaking this into multiple commits.
 #     Can you show the correct circle?
@@ -150,18 +150,6 @@ def draw_a_picture(point, n, color, window):
         line_number = line_number + 1
 
     window.render(0.5)
-
-
-#       Draws an rg.Circle with the given point as the center.
-#       The radius of the rg.Circle is 100 pixels
-#       Draws an rg.Rectangle with the given point as the center.
-#       The width of the Rectangle is 160 pixels and the height is 80 pixels
-#       Draws n lines from the Center of the Rectangle to the top line
-#       of the Rectangle that are equally spaced
-#       The color is used as the line colors unless the number of the line
-#       is prime.  If the number of the line is prime,
-#       the color should be 'orange'. The fist line drawn should be
-#       the color given because one is not considered prime.
 
 
 main()
