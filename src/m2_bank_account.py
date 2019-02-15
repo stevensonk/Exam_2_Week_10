@@ -111,7 +111,8 @@ def run_test_init():
     expected_account_number = 'A1'
     print("Expected:", expected_name, expected_balance, expected_account_number)
     print("Actual:  ", b1.name, b1.balance, b1.account_number)
-    if (expected_name == b1.name) and (expected_balance == b1.balance) and (expected_account_number == b1.account_number):
+    if (expected_name == b1.name) and (expected_balance == b1.balance) and (
+            expected_account_number == b1.account_number):
         print("Test passed SUCCESSFULLY!")
     else:
         print_failure_message()

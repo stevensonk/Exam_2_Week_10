@@ -29,7 +29,7 @@ def test_draw_a_picture():
     print('###################################################')
     print('Test 1 of draw_a_picture.')
     print('Called with point1 =', point1)
-    print( 'n =', n, ' color = blue')
+    print('n =', n, ' color = blue')
     print('###################################################')
     draw_a_picture(point1, n, 'blue', test_window)
 
@@ -39,7 +39,7 @@ def test_draw_a_picture():
     print('###################################################')
     print('Test 2 of draw_a_picture.')
     print('Called with point2 =', point2)
-    print( 'n =', n, ' color = green')
+    print('n =', n, ' color = green')
     print('###################################################')
     draw_a_picture(point2, n, 'green', test_window)
     test_window.close_on_mouse_click()
@@ -110,6 +110,7 @@ def is_prime(n):
 
     return True
 
+
 # -------------------------------------------------------------------------
 #  DONE: 2. Implement and test the draw_a_picture function.
 #           Tests have been written for you (above in main).
@@ -141,10 +142,10 @@ def draw_a_picture(point, n, color, window):
     spacing = 160 / (n-1)
     for k in range(n):
         line = rg.Line(start, end)
-        if is_prime(line_number) == True:
+        if is_prime(line_number):
             line.color = 'orange'
         else:
-            line.color = 'blue'
+            line.color = color
         line.attach_to(window)
         end = rg.Point(end.x - spacing, end.y)
         line_number = line_number + 1
