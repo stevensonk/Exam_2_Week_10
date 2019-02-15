@@ -1,6 +1,8 @@
 #  This problem uses a class to create a bank account and simulates some
 #  typical banking practices.  Read the instructions carefully and you will be
 # successful
+
+
 def main():
     # when you have initialized your object, use the calls below to test
     run_test_init()
@@ -43,18 +45,17 @@ class Bank(object):
 
         Type hints:
           :type name: str
-          :type balance: float
+          :type initial_deposit: float
           :type account_number: str
         """
-        self.name = name
-        self.initial_deposit = initial_deposit
-        self.account_number = account_number
-        self.balance = initial_deposit
     # ---------------------------------------------------------------------
     # DONE: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
     # ---------------------------------------------------------------------
-
+        self.name = name
+        self.initial_deposit = initial_deposit
+        self.account_number = account_number
+        self.balance = initial_deposit
 
     def withdraw(self, amount):
         """
@@ -96,7 +97,6 @@ class Bank(object):
             return self.balance
 
 
-
 def run_test_init():
     """ Tests the   __init__   method of the Bank class. """
     print()
@@ -105,7 +105,7 @@ def run_test_init():
     print('-----------------------------------------------------------')
 
     # Test 1:  Contents fit in the Box easily.
-    b1= Bank('Brackin', 10000, 'A1')
+    b1 = Bank('Brackin', 10000, 'A1')
     expected_name = 'Brackin'
     expected_balance = 10000
     expected_account_number = 'A1'
@@ -147,6 +147,7 @@ def run_test_init():
     else:
         print_failure_message()
     print()
+
 
 # ---------------------------------------------------------------------
 # DONE: 3. Implement your test for the withdraw method below
