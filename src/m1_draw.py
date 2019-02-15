@@ -80,7 +80,7 @@ def test_draw_a_picture():
 #   The is_prime function is supplied.  Do NOT change is_prime
 #     """
 ###############################################################################
-# TODO: 1  READ the doc-string for the is_prime function defined below.
+# DONE: 1  READ the doc-string for the is_prime function defined below.
 # You do NOT need to understand its implementations,
 # just its specification (per the doc-string).
 # You should  ** CALL **  functions as needed in implementing the
@@ -128,8 +128,40 @@ def is_prime(n):
 #
 #
 def draw_a_picture(point, n, color, window):
+    circle = rg.Circle(point, 100)
+    circle.attach_to(window)
+    corner1 = rg.Point(point.x + 80, point.y + 40)
+    corner2 = rg.Point(point.x - 80, point.y - 40)
+    rectangle = rg.Rectangle(corner1, corner2)
+    rectangle.attach_to(window)
 
-    pass
+    line_number = 1
+    start = point
+    end = rg.Point(corner2.x + 160, corner2.y)
+    spacing = 160 / (n-1)
+    for k in range(n):
+        line = rg.Line(start, end)
+        if is_prime(line_number) == True:
+            line.color = 'orange'
+        else:
+            line.color = 'blue'
+        line.attach_to(window)
+        end = rg.Point(end.x - spacing, end.y)
+        line_number = line_number + 1
+
+    window.render(0.5)
+
+
+#       Draws an rg.Circle with the given point as the center.
+#       The radius of the rg.Circle is 100 pixels
+#       Draws an rg.Rectangle with the given point as the center.
+#       The width of the Rectangle is 160 pixels and the height is 80 pixels
+#       Draws n lines from the Center of the Rectangle to the top line
+#       of the Rectangle that are equally spaced
+#       The color is used as the line colors unless the number of the line
+#       is prime.  If the number of the line is prime,
+#       the color should be 'orange'. The fist line drawn should be
+#       the color given because one is not considered prime.
 
 
 main()
